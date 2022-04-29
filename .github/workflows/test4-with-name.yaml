@@ -32,7 +32,7 @@ env:
       github.event.issue.number ||
       github.event.inputs.pr
     }}
-  COMMENT: |
+  COMMENT_BODY: |
     ${{
       github.event.comment.body || (
         github.event_name == 'workflow_dispatch' &&
