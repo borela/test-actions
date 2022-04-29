@@ -60,3 +60,5 @@ jobs:
           TEST_VAR=123
           echo '${{ github.event.inputs.bar }}' 
           echo $TEST_VAR
+          COMMENT_BODY=$(printf '%q', $COMMENT_BODY)
+          echo $COMMENT_BODY
