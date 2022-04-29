@@ -1,4 +1,4 @@
-name: Foo / Bar / Test with custom name
+name: Foo / Bar / Test 3 with custom name
 on:
   issue_comment:
 env:
