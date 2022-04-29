@@ -1,0 +1,11 @@
+name: Foo / Bar / Test 4 with custom name
+on:
+  issue_comment:
+env:
+  TEST: 123
+jobs:
+  Do-Something:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
