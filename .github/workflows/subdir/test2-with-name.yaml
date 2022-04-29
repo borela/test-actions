@@ -1,4 +1,4 @@
-name: Test with custom name
+name: Test2 with custom name
 on:
   issue_comment:
 env:
