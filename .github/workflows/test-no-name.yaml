@@ -1,5 +1,6 @@
 on:
   issue_comment:
+    types: [created]
 env:
   TEST: 123
 jobs:
