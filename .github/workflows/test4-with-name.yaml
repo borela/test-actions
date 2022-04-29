@@ -22,7 +22,9 @@ jobs:
       - name: set-var
         run: |
           MY_VAR=${{ github.event.inputs.foo }}
-      - name: test-foo-bar
+      - name: echo my var
         run: |
-          echo $MY_VAR &
+          echo $MY_VAR
+      - name: echo bar
+        run: |
           echo '${{ github.event.inputs.bar }}' 
