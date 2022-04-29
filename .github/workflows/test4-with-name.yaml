@@ -3,6 +3,10 @@ on:
   issue_comment:
   workflow_dispatch:
     inputs:
+      pr:
+        description: PR
+        type: string
+        required: true
       foo:
         description: Foo description
         type: boolean
@@ -13,6 +17,13 @@ on:
         required: false
 env:
   TEST: 123
+  FOO: ${{ github.event.inputs.foo }}
+  BAR: ${{ github.event.inputs.bar }}
+  FOO_BAR: $FOO
+  FOO_BAR2: ${{
+    github.event.issue.number ||
+    github.event.inputs.pr
+  }}
 jobs:
   Do-Something:
     runs-on: ubuntu-latest
