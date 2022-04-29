@@ -25,6 +25,22 @@ env:
       github.event.issue.number ||
       github.event.inputs.pr
     }}
+  PR_NUMBER: |
+    ${{
+      github.event.issue.number ||
+      github.event.inputs.pr
+    }}
+  COMMENT: |
+    ${{
+      github.event.comment.body || (
+        github.event_name == 'workflow_dispatch' &&
+        format(
+          '@borela review app {0}',
+          github.event.inputs.scrubdb && 'scrubbed'
+        )
+      )
+    }}
+
 jobs:
   Do-Something:
     runs-on: ubuntu-latest
