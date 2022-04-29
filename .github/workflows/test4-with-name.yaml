@@ -55,4 +55,6 @@ jobs:
           echo $MY_VAR
       - name: echo bar
         run: |
+          echo 'foo'
+          echo 'bar'
           echo '${{ github.event.inputs.bar }}' 
